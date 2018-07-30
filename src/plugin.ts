@@ -31,7 +31,6 @@ export
 export
     class NBWidgetExtension implements INBWidgetExtension {
     createNew(nb: NotebookPanel, context: DocumentRegistry.IContext<INotebookModel>): IDisposable {
-        // let manager = new ContextManager(context);
 
         nb.rendermime.addFactory({
             safe: false,
@@ -49,7 +48,6 @@ export
             if (nb.rendermime) {
                 nb.rendermime.removeMimeType(ROOT_EXEC_MIME_TYPE);
             }
-            // manager.dispose();
         });
     }
 }

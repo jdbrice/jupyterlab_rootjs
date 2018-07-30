@@ -10,8 +10,6 @@ import {
     ReadonlyJSONObject
 } from '@phosphor/coreutils'
 
-// import * as requirejs from 'requirejs';
-
 const HTML_MIME_TYPE = 'text/html'
 const JS_MIME_TYPE = 'application/javascript'
 export const ROOT_LOAD_MIME_TYPE = 'application/vnd.rootjs_load.v0+json'
@@ -19,7 +17,7 @@ export const ROOT_EXEC_MIME_TYPE = 'application/vnd.rootjs_exec.v0+json'
 
 
 /**
- * Load HVJS and CSS into the DOM
+ * Load ROOTJS into the DOM
  */
 export
     class ROOTJSLoad extends Widget implements IRenderMime.IRenderer {
@@ -29,9 +27,6 @@ export
     constructor(options: IRenderMime.IRendererOptions) {
         super();
         this._script_element = document.createElement("script");
-        // (window as any).requirejs = requirejs;
-        // (window as any).jQuery = jquery;
-        // (window as any).$ = jquery;
     }
 
     renderModel(model: IRenderMime.IMimeModel): Promise<void> {
@@ -40,6 +35,7 @@ export
         console.log( data );
 
         // load require js on first pass
+        // after it loads then configure for ROOTJS
         let that:ROOTJSLoad = this;
         this._script_element.onload = function () {
             that._script_element = document.createElement("script");
@@ -92,7 +88,7 @@ export
     }
 
     renderModel(model: IRenderMime.IMimeModel): Promise<void> {
-        console.log( "EXEC!" );
+        console.log( "ROOTJS EXEC" );
         let metadata = model.metadata[this._exec_mimetype] as ReadonlyJSONObject
         const id = metadata.id as string;
         const cw = metadata.width as string;
@@ -114,8 +110,6 @@ export
                 this._div_element.id = id;
                 this._div_element.style.width = cw + 'px';
                 this._div_element.style.height = ch + 'px';
-                // this._div_element.setAttribute("style", "width:" + cw + "px");
-                // this._div_element.setAttribute("style", "height:" + ch + "px");
                 this.node.appendChild(this._div_element);
             }
 
