@@ -1,6 +1,6 @@
-# py-rootjs
+# jupyterlab_rootjs
 
-CERN ROOTJS in jupyter lab
+jupyter lab support for CERN ROOT JS
 
 
 ## Prerequisites
@@ -10,7 +10,7 @@ CERN ROOTJS in jupyter lab
 ## Installation
 
 ```bash
-jupyter labextension install py-rootjs
+jupyter labextension install jupyterlab_rootjs
 ```
 
 ## Development
