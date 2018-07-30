@@ -1,17 +1,23 @@
 {
-  "name": "py-rootjs",
+  "name": "jupyterlab_rootjs",
   "version": "0.1.0",
-  "description": "CERN ROOTJS in jupyter lab",
+  "description": "jupyter lab extension to support CERN ROOT JS",
   "keywords": [
     "jupyter",
     "jupyterlab",
-    "jupyterlab-extension"
+    "jupyterlab-extension",
+    "CERN",
+    "ROOT",
+    "ROOTJS",
+    "HEP",
+    "physics",
+    "particle"
   ],
-  "homepage": "https://github.com/my_name/myextension",
+  "homepage": "https://github.com/jdbrice/jupyterlab_rootjs",
   "bugs": {
-    "url": "https://github.com/my_name/myextension/issues"
+    "url": "https://github.com/jdbrice/jupyterlab_rootjs/issues"
   },
-  "license": "BSD-3-Clause",
+  "license": "GPL-3.0-or-later",
   "author": "Daniel Brandenburg",
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
@@ -21,7 +27,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/my_name/myextension.git"
+    "url": "https://github.com/jdbrice/jupyterlab_rootjs.git"
   },
   "scripts": {
     "build": "tsc",
@@ -37,9 +43,7 @@
     "@jupyterlab/rendermime-interfaces": "^1.1.2",
     "@jupyterlab/services": "^3.0.3",
     "@phosphor/coreutils": "^1.3.0",
-    "@phosphor/widgets": "^1.6.0",
-    "@types/requirejs": "^2.1.31",
-    "requirejs": "^2.3.5"
+    "@phosphor/widgets": "^1.6.0"
   },
   "devDependencies": {
     "rimraf": "^2.6.1",
