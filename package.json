@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab_rootjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "jupyter lab extension to support CERN ROOT JS",
   "keywords": [
     "jupyter",
@@ -36,18 +36,18 @@
     "prepare": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@jupyterlab/application": "^0.17.2",
-    "@jupyterlab/apputils": "^0.17.2",
-    "@jupyterlab/docregistry": "^0.17.2",
-    "@jupyterlab/notebook": "^0.17.2",
-    "@jupyterlab/rendermime-interfaces": "^1.1.2",
-    "@jupyterlab/services": "^3.0.3",
-    "@phosphor/coreutils": "^1.3.0",
-    "@phosphor/widgets": "^1.6.0"
+    "@jupyterlab/application": "^1.0.1",
+    "@jupyterlab/apputils": "^1.0.1",
+    "@jupyterlab/docregistry": "^1.0.1",
+    "@jupyterlab/notebook": "^1.0.1",
+    "@jupyterlab/rendermime-interfaces": "^1.3.0",
+    "@jupyterlab/services": "^4.0.1",
+    "@phosphor/coreutils": "^1.3.1",
+    "@phosphor/widgets": "^1.8.1"
   },
   "devDependencies": {
     "rimraf": "^2.6.1",
-    "typescript": "~2.9.2"
+    "typescript": "^3.5.3"
   },
   "jupyterlab": {
     "extension": true
